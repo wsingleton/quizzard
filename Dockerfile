@@ -1,6 +1,7 @@
 FROM openjdk:8-jdk-alpine
 
-ARG PROFILE=local
+ARG profile=local
+ENV PROFILE=${profile}
 
 ADD target/*.jar app.jar
 EXPOSE 5000
